@@ -24,3 +24,4 @@ def imageFinder(sent):
             sents_and_images[sentence] = image[1]
         else:
             sents_and_images[sentence] = image[0]
+    return sents_and_images
