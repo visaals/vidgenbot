@@ -13,10 +13,10 @@ class ImageFinder:
         self.nlp = spacy.load('en')
         self.sents_and_images = {}
 
-    def retrieve_sentence_image_pairs(sentence_list):
+    def retrieve_sentence_image_pairs(self, sentence_list):
         for sentence in sentence_list:
             # tags words of sentences with part of speech
-            doc=self.nlp(unicode(sentence))
+            doc=self.nlp(sentence)
             terms = []
             for token in doc:
                 if token.dep_ == 'nsubj' or token.pos_ == 'NOUN':
